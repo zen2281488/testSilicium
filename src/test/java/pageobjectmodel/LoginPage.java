@@ -25,7 +25,7 @@ public class LoginPage {
         loginBtn.click();
     }
 
-    public String loginExeption() {
+    public String LoginExeption() {
         return exeptionHeader.getText();
     }
 }

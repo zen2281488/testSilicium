@@ -52,7 +52,7 @@ public class TestUnit {
     public void secondTest() {
         browser.get("https://www.saucedemo.com/");
         loginPage.userLogin(wrongLogin, wrongPassword);
-        Assert.assertEquals("Ошибка в тексте уведомления о некорректном логине и пароле", "Epic sadface: Username and password do not match any user in this service", loginPage.loginExeption());
+        Assert.assertEquals("Ошибка в тексте уведомления о некорректном логине и пароле", "Epic sadface: Username and password do not match any user in this service", loginPage.LoginExeption());
 
     }
 
