@@ -7,10 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class CartPage {
-    private final WebDriver browser;
 
     public CartPage(WebDriver browser) {
-        this.browser = browser;
         PageFactory.initElements(browser, this);
     }
 
