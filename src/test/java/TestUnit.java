@@ -1,7 +1,10 @@
-import org.junit.*;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjectModel.*;
+import pageobjectmodel.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -49,12 +52,11 @@ public class TestUnit {
     public void secondTest() {
         browser.get("https://www.saucedemo.com/");
         loginPage.userLogin(wrongLogin, wrongPassword);
-        Assert.assertEquals("Ошибка в тексте уведомления о завершенном заказе", "Epic sadface: Username and password do not match any user in this service", loginPage.assertLoginExept());
+        Assert.assertEquals("Ошибка в тексте уведомления о завершенном заказе", "Epic sadface: Username and password do not match any user in this service", loginPage.loginExeption());
 
     }
 
     @After
-
     public void after() {
         browser.close();
     }

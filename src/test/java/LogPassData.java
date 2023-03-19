@@ -1,7 +1,7 @@
 
 public class LogPassData {
-    static String userLogin = "standard_user";
-    static String userPass = "secret_sauce";
-    static String wrongUserLogin = "test";
-    static String wrongUserPass = "test";
+    static final String userLogin = "standard_user";
+    static final String userPass = "secret_sauce";
+    static final String wrongUserLogin = "test";
+    static final String wrongUserPass = "test";
 }

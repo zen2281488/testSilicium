@@ -1,5 +1,5 @@
-package pageObjectModel;
-import org.openqa.selenium.By;
+package pageobjectmodel;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +13,8 @@ public class LoginPage {
     private WebElement passwordInput;
     @FindBy(id = "login-button")
     private WebElement loginBtn;
+    @FindBy(css = "[data-test='error']")
+    private WebElement exeptionHeader;
 
     public LoginPage(WebDriver browser) {
         this.browser = browser;
@@ -26,9 +28,8 @@ public class LoginPage {
         return this;
     }
 
-    public String assertLoginExept() {
-        WebElement exeption = browser.findElement(By.cssSelector("h3"));
-        String text = exeption.getText();
+    public String loginExeption() {
+        String text = exeptionHeader.getText();
         return text;
     }
 }
